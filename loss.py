@@ -13,3 +13,5 @@ def reconstruction_loss(reconstruct, img, rs):
     loss = diff * diff
     for i in range(len(reconstruct.shape)):
         loss = tf.keras.backend.sum(loss, axis=0)
+
+    return loss
